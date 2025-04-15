@@ -34,6 +34,15 @@ steps:
    24  ls
    25  cd roles
    26  ls
+    ansible all -a "yum update -y"
+   34  ansible all -a "yum install git -y"
+   35  ansible all -a "git --version"
+   36  ansible all -a "nproc"
+   37  ansible all -a "df -h"
+   38  ansible all -a "yum install maven -y"
+   39  ansible all -a "mvn --version"
+   40  history
+
    27  cd ..
    28  sudo vi /etc/ansible/hosts
    29  ansible all -a "ping"
